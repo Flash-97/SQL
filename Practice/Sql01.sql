@@ -18,7 +18,9 @@ select first_name as "이름",
        commission_pct as "커미션 비율",
        salary as "월급"
 from employees
-where salary > 3000;
+where commission_pct is null
+and   manager_id is not null
+and   salary > 3000;
 
 --최고월급(max_salary)이 10000 이상인 업무의 이름(job_title)과 최고월급(max_salary)을 최고월급의(max_salary) 내림차순(DESC)로 정렬하여 출력하세요.    
 select job_title,
@@ -71,3 +73,9 @@ select first_name as "이름",
        hire_date as "입사일"
 from employees
 where hire_date <= '03/12/31';
+
+
+
+
+
+
